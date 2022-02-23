@@ -21,6 +21,7 @@ setup(
     entry_points={
             'console_scripts': [
                     'talker = py_pubsub.publisher_member_function:main',
+                    'talker2 = py_pubsub.pub_goal_reach:main'
             ],
     },
 )
