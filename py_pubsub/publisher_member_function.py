@@ -34,8 +34,8 @@ class MinimalPublisher(Node):
         self.goal_pose1 = PoseStamped()
         self.goal_pose1.header.frame_id = 'map'
         self.goal_pose1.header.stamp = self.get_clock().now().to_msg()
-        self.goal_pose1.pose.position.x = 10.0
-        self.goal_pose1.pose.position.y = -2.0
+        self.goal_pose1.pose.position.x = -10.0
+        self.goal_pose1.pose.position.y = 10.0
         self.goal_pose1.pose.position.z = 0.0
         self.goal_pose1.pose.orientation.x = 0.0
         self.goal_pose1.pose.orientation.y = 0.0
@@ -45,14 +45,180 @@ class MinimalPublisher(Node):
         self.goal_pose2 = PoseStamped()
         self.goal_pose2.header.frame_id = 'map'
         self.goal_pose2.header.stamp = self.get_clock().now().to_msg()
-        self.goal_pose2.pose.position.x = -6.0
-        self.goal_pose2.pose.position.y = 7.0
+        self.goal_pose2.pose.position.x = 0.0
+        self.goal_pose2.pose.position.y = 10.0
         self.goal_pose2.pose.position.z = 0.0
         self.goal_pose2.pose.orientation.x = 0.0
         self.goal_pose2.pose.orientation.y = 0.0
         self.goal_pose2.pose.orientation.z = 0.0
         self.goal_pose2.pose.orientation.w = 1.0
-        self.path=[self.goal_pose1,self.goal_pose2, self.goal_pose1,self.goal_pose2, self.goal_pose1,self.goal_pose2, self.goal_pose1,self.goal_pose2]
+        
+        self.goal_pose3 = PoseStamped()
+        self.goal_pose3.header.frame_id = 'map'
+        self.goal_pose3.header.stamp = self.get_clock().now().to_msg()
+        self.goal_pose3.pose.position.x = 10.0
+        self.goal_pose3.pose.position.y = 10.0
+        self.goal_pose3.pose.position.z = 0.0
+        self.goal_pose3.pose.orientation.x = 0.0
+        self.goal_pose3.pose.orientation.y = 0.0
+        self.goal_pose3.pose.orientation.z = 0.0
+        self.goal_pose3.pose.orientation.w = 1.0
+        
+        self.goal_pose4 = PoseStamped()
+        self.goal_pose4.header.frame_id = 'map'
+        self.goal_pose4.header.stamp = self.get_clock().now().to_msg()
+        self.goal_pose4.pose.position.x = 10.0
+        self.goal_pose4.pose.position.y = 8.0
+        self.goal_pose4.pose.position.z = 0.0
+        self.goal_pose4.pose.orientation.x = 0.0
+        self.goal_pose4.pose.orientation.y = 0.0
+        self.goal_pose4.pose.orientation.z = 0.0
+        self.goal_pose4.pose.orientation.w = 1.0
+        
+        self.goal_pose5 = PoseStamped()
+        self.goal_pose5.header.frame_id = 'map'
+        self.goal_pose5.header.stamp = self.get_clock().now().to_msg()
+        self.goal_pose5.pose.position.x = 0.0
+        self.goal_pose5.pose.position.y = 8.0
+        self.goal_pose5.pose.position.z = 0.0
+        self.goal_pose5.pose.orientation.x = 0.0
+        self.goal_pose5.pose.orientation.y = 0.0
+        self.goal_pose5.pose.orientation.z = 0.0
+        self.goal_pose5.pose.orientation.w = 1.0
+        
+        self.goal_pose6 = PoseStamped()
+        self.goal_pose6.header.frame_id = 'map'
+        self.goal_pose6.header.stamp = self.get_clock().now().to_msg()
+        self.goal_pose6.pose.position.x = -10.0
+        self.goal_pose6.pose.position.y = 8.0
+        self.goal_pose6.pose.position.z = 0.0
+        self.goal_pose6.pose.orientation.x = 0.0
+        self.goal_pose6.pose.orientation.y = 0.0
+        self.goal_pose6.pose.orientation.z = 0.0
+        self.goal_pose6.pose.orientation.w = 1.0
+        
+        self.goal_pose7 = PoseStamped()
+        self.goal_pose7.header.frame_id = 'map'
+        self.goal_pose7.header.stamp = self.get_clock().now().to_msg()
+        self.goal_pose7.pose.position.x = -10.0
+        self.goal_pose7.pose.position.y = 6.0
+        self.goal_pose7.pose.position.z = 0.0
+        self.goal_pose7.pose.orientation.x = 0.0
+        self.goal_pose7.pose.orientation.y = 0.0
+        self.goal_pose7.pose.orientation.z = 0.0
+        self.goal_pose7.pose.orientation.w = 1.0
+        
+        self.goal_pose8 = PoseStamped()
+        self.goal_pose8.header.frame_id = 'map'
+        self.goal_pose8.header.stamp = self.get_clock().now().to_msg()
+        self.goal_pose8.pose.position.x = 0.0
+        self.goal_pose8.pose.position.y = 6.0
+        self.goal_pose8.pose.position.z = 0.0
+        self.goal_pose8.pose.orientation.x = 0.0
+        self.goal_pose8.pose.orientation.y = 0.0
+        self.goal_pose8.pose.orientation.z = 0.0
+        self.goal_pose8.pose.orientation.w = 1.0
+       
+        self.goal_pose9 = PoseStamped()
+        self.goal_pose9.header.frame_id = 'map'
+        self.goal_pose9.header.stamp = self.get_clock().now().to_msg()
+        self.goal_pose9.pose.position.x = 10.0
+        self.goal_pose9.pose.position.y = 6.0
+        self.goal_pose9.pose.position.z = 0.0
+        self.goal_pose9.pose.orientation.x = 0.0
+        self.goal_pose9.pose.orientation.y = 0.0
+        self.goal_pose9.pose.orientation.z = 0.0
+        self.goal_pose9.pose.orientation.w = 1.0
+        
+        self.goal_pose10 = PoseStamped()
+        self.goal_pose10header.frame_id = 'map'
+        self.goal_pose10header.stamp = self.get_clock().now().to_msg()
+        self.goal_pose10.pose.position.x = 10.0
+        self.goal_pose10.pose.position.y = 4.0
+        self.goal_pose10.pose.position.z = 0.0
+        self.goal_pose10.pose.orientation.x = 0.0
+        self.goal_pose10.pose.orientation.y = 0.0
+        self.goal_pose10.pose.orientation.z = 0.0
+        self.goal_pose10.pose.orientation.w = 1.0
+        
+        self.goal_pose11 = PoseStamped()
+        self.goal_pose11.header.frame_id = 'map'
+        self.goal_pose11.header.stamp = self.get_clock().now().to_msg()
+        self.goal_pose11.pose.position.x = 0.0
+        self.goal_pose11.pose.position.y = 4.0
+        self.goal_pose11.pose.position.z = 0.0
+        self.goal_pose11.pose.orientation.x = 0.0
+        self.goal_pose11.pose.orientation.y = 0.0
+        self.goal_pose11.pose.orientation.z = 0.0
+        self.goal_pose11.pose.orientation.w = 1.0
+        
+        self.goal_pose12 = PoseStamped()
+        self.goal_pose12.header.frame_id = 'map'
+        self.goal_pose12.header.stamp = self.get_clock().now().to_msg()
+        self.goal_pose12.pose.position.x = -10.0
+        self.goal_pose12.pose.position.y = 4.0
+        self.goal_pose12.pose.position.z = 0.0
+        self.goal_pose12.pose.orientation.x = 0.0
+        self.goal_pose12.pose.orientation.y = 0.0
+        self.goal_pose12.pose.orientation.z = 0.0
+        self.goal_pose12.pose.orientation.w = 1.0
+        
+        self.goal_pose13 = PoseStamped()
+        self.goal_pose13.header.frame_id = 'map'
+        self.goal_pose13.header.stamp = self.get_clock().now().to_msg()
+        self.goal_pose13.pose.position.x = -10.0
+        self.goal_pose13.pose.position.y = 2.0
+        self.goal_pose13.pose.position.z = 0.0
+        self.goal_pose13.pose.orientation.x = 0.0
+        self.goal_pose13.pose.orientation.y = 0.0
+        self.goal_pose13.pose.orientation.z = 0.0
+        self.goal_pose13.pose.orientation.w = 1.0
+        
+        self.goal_pose14 = PoseStamped()
+        self.goal_pose14.header.frame_id = 'map'
+        self.goal_pose14.header.stamp = self.get_clock().now().to_msg()
+        self.goal_pose14.pose.position.x = 0.0
+        self.goal_pose14.pose.position.y = 2.0
+        self.goal_pose14.pose.position.z = 0.0
+        self.goal_pose14.pose.orientation.x = 0.0
+        self.goal_pose14.pose.orientation.y = 0.0
+        self.goal_pose14.pose.orientation.z = 0.0
+        self.goal_pose14.pose.orientation.w = 1.0
+        
+        self.goal_pose15 = PoseStamped()
+        self.goal_pose15.header.frame_id = 'map'
+        self.goal_pose15.header.stamp = self.get_clock().now().to_msg()
+        self.goal_pose15.pose.position.x = 10.0
+        self.goal_pose15.pose.position.y = 2.0
+        self.goal_pose15.pose.position.z = 0.0
+        self.goal_pose15.pose.orientation.x = 0.0
+        self.goal_pose15.pose.orientation.y = 0.0
+        self.goal_pose15.pose.orientation.z = 0.0
+        self.goal_pose15.pose.orientation.w = 1.0
+        
+        self.goal_pose16 = PoseStamped()
+        self.goal_pose16.header.frame_id = 'map'
+        self.goal_pose16.header.stamp = self.get_clock().now().to_msg()
+        self.goal_pose16.pose.position.x = 10.0
+        self.goal_pose16.pose.position.y = 0.0
+        self.goal_pose16.pose.position.z = 0.0
+        self.goal_pose16.pose.orientation.x = 0.0
+        self.goal_pose16.pose.orientation.y = 0.0
+        self.goal_pose16.pose.orientation.z = 0.0
+        self.goal_pose16.pose.orientation.w = 1.0
+        
+        self.goal_pose17 = PoseStamped()
+        self.goal_pose17.header.frame_id = 'map'
+        self.goal_pose17.header.stamp = self.get_clock().now().to_msg()
+        self.goal_pose17.pose.position.x = 0.0
+        self.goal_pose17.pose.position.y = 0.0
+        self.goal_pose17.pose.position.z = 0.0
+        self.goal_pose17.pose.orientation.x = 0.0
+        self.goal_pose17.pose.orientation.y = 0.0
+        self.goal_pose17.pose.orientation.z = 0.0
+        self.goal_pose17.pose.orientation.w = 1.0
+        
+        self.path=[self.goal_pose1,self.goal_pose2, self.goal_pose3,self.goal_pose4, self.goal_pose5,self.goal_pose6, self.goal_pose7,self.goal_pose8, self.goal_pose9, self.goal_pose10, self.goal_pose11, self.goal_pose12, self.goal_pose13, self.goal_pose14, self.goal_pose15, self.goal_pose16, self.goal_pose17, self.goal_pose18, self.goal_pose19, self.goal_pose20]
         self.iter=0
 
 
